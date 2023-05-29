@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="corpo"
+      </h2></h2>
+      <label for="input">Texto:</label>
+      <textarea id="input"></textarea>
+      <label for="key">Chave:</label>
+      <input class="chave" type="text" id="key">
+      <div>
+        <button onclick="criptografar()">Criptografar</button>
+        <button onclick="descriptografar()">Descriptografar</button>
+      </div>
+      <label for="output">Resultado:</label>
+      <textarea id="output" readonly></textarea>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+      <script>
+        function criptografar() {
+          var input = document.getElementById("input").value;
+          var key = document.getElementById("key").value;
+
+          var ciphertext = CryptoJS.AES.encrypt(input, key).toString();
+
+          document.getElementById("output").value = ciphertext;
+        }
+
+        function descriptografar() {
+          var ciphertext = document.getElementById("output").value;
+          var key = document.getElementById("key").value;
+
+          var bytes = CryptoJS.AES.decrypt(ciphertext, key);
+          var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+
+          document.getElementById("output").value = plaintext;
+        }
+      </script>
+    </div>
+</body>
+</html>

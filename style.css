@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+ body {
+    color: aliceblue;
+    font-family: 'Krona One', sans-serif;;
+    background-color: black;
+    font-size: 30px;
+  }
+
+  label {
+    font-weight: bold;
+    
+
+  }
+
+textarea {
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    border-color: aqua;
+}
+
+.chave {
+  border-radius: 5px;
+  height: 20px;
+  background-color: black;
+  border-color: aqua;
+  
+}
+
+.corpo{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button{
+  background-color: black;
+  color:white;
+  border-color: aqua;
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
+
+}
+
+textarea#input {
+  color: white;
+}
+
+input#key{
+  color:white;
+}
+
+textarea#output{
+  color:white;
+}
